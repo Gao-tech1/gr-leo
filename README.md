@@ -119,16 +119,28 @@ where $`\Delta f_d`$ is measured in Hz
 * [C++ SGP4 Satellite Library](https://github.com/dnwrnr/sgp4) ( 1.0 ) (will be automatically installed if not present)
 
 ## Installation
-
-1. `git clone https://gitlab.com/librespacefoundation/gr-leo`
-2. `cd gr-leo`
-3. `mkdir build && cd build`
-4. `cmake ..`
-5. `make`
-6. `sudo make install`
-
-If this is the first time you are building the gr-leo module run
-`sudo ldconfig`
+```
+sudo add-apt-repository ppa:gnuradio/gnuradio-releases
+sudo apt-get update
+sudo apt-get install gnuradio python3-packaging
+```
+After that you can install GNU-RADIO-LEO according to the Usage Manual
+https://librespacefoundation.gitlab.io/gr-leo/build_guide.html
+```
+git clone https://gitlab.com/librespacefoundation/gr-leo
+cd gr-leo
+mkdir build
+cd build
+cmake ../
+make
+sudo make install
+sudo ldconfig
+```
+After building the GNU RADIO environment, you can open graphical operation interface
+```
+gnuradio-companion
+```
+You can open the example file for learning.
 
 ### Advanced
 By default, the **gr-leo** module will use the default installation prefix.
